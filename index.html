@@ -3,9 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
     <title>eCommerce Campus</title>
 </head>
 <body>
 
+    <header>
+        <button id="marcaSelector"><i class='bx bxs-watch'></i></button>
+        <div id="listaMarcas" class="">
+            <ul onclick="seleccionarMarca(event)">
+                <li data-marca="rolex">Rolex</li>
+                <li data-marca="cartier">Cartier</li>
+                <li data-marca="vacheronConstantin">Vacheron Constantin</li>
+                <li data-marca="patekPhilippe">Patek Philippe</li>
+                <li data-marca="jaegerLeCoultre">Jaeger Le Coultre</li>
+                <li data-marca="schaffhausen">IWC Schaffhausen</li>
+                <li data-marca="omega">Omega</li>
+                <li data-marca="langeSohne">A Lange Söhne</li>
+                <li data-marca="audemarsPiguet">Audemars Piguet</li>
+                <li data-marca="hublot">Hublot</li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="marcasContainer">
+        <section id="rolex" class="seccionMarca">
+            <h1>ROLEX</h1>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/rolex/rolex1908.avif" alt="">
+                        <img src="storage/images/rolex/rolex1908-1.avif" alt="">
+                        <img src="storage/images/rolex/rolex1908-2.avif" alt="">
+                        <img src="storage/images/rolex/rolex1908-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/rolex/rolex1908.avif" alt="">
+                    </div>
+                </div>
+                <h2>ROLEX 1908</h2>
+                <div class="informacion">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam suscipit, veniam quidem, porro impedit iusto amet unde pariatur ut dolo
+                    </p>
+                    <span>$ 100.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/rolex/rolexCosmographDaytona.avif" alt="">
+                        <img src="storage/images/rolex/rolexCosmographDaytona-1.avif" alt="">
+                        <img src="storage/images/rolex/rolexCosmographDaytona-2.avif" alt="">
+                        <img src="storage/images/rolex/rolexCosmographDaytona-3.avif" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/rolex/rolexCosmographDaytona.avif" alt="">
+                    </div>
+                </div>
+                <h2>ROLEX COSMOGRAPH DAYTONA</h2>
+                <div class="informacion">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam suscipit, veniam quidem, porro impedit iusto amet unde pariatur ut dolo
+                    </p>
+                    <span>$ 100.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/rolex/rolexGmtMaster-ii.avif" alt="">
+                        <img src="storage/images/rolex/rolexGmtMaster-ii-1.avif" alt="">
+                        <img src="storage/images/rolex/rolexGmtMaster-ii-2.png" alt="">
+                        <img src="storage/images/rolex/rolexGmtMaster-ii-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/rolex/rolexGmtMaster-ii.avif" alt="">
+                    </div>
+                </div>
+                <h2>Rolex GMT Master</h2>
+                <div class="informacion">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam suscipit, veniam quidem, porro impedit iusto amet unde pariatur ut dolo
+                    </p>
+                    <span>$ 100.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/rolex/rolexSkyDweller.avif" alt="">
+                        <img src="storage/images/rolex/rolexSkyDweller-1.avif" alt="">
+                        <img src="storage/images/rolex/rolexSkyDweller-2.png" alt="">
+                        <img src="storage/images/rolex/rolexSkyDweller-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/rolex/rolexSkyDweller.avif" alt="">
+                    </div>
+                </div>
+                <h2>Rolex Sky Dweller</h2>
+                <div class="informacion">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam suscipit, veniam quidem, porro impedit iusto amet unde pariatur ut dolo
+                    </p>
+                    <span>$ 100.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cartier" class="seccionMarca hidden">
+            <h1>CARTIER</h1>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/cartier/caBaignoire.png" alt="">
+                        <img src="storage/images/cartier/caBaignoire-1.png" alt="">
+                        <img src="storage/images/cartier/caBaignoire-2.png" alt="">
+                        <img src="storage/images/cartier/caBaignoire-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/cartier/caBaignoire.png" alt="">
+                    </div>
+                </div>
+                <h2>Reloj Baignoire</h2>
+                <div class="informacion">
+                    <p>
+                        Reloj Baignoire de Cartier, tamaño pequeño, movimiento de cuarzo. Caja, corona y brazalete de oro blanco rodiado 750/1000 engastados con 1026 diamantes talla brillante con un total de 6,39 quilates. Corona perlada, esfera plateada, agujas de acero azulado en forma de espada, cristal de zafiro. Largo: 31,4 mm, ancho: 23,1 mm, grosor: 7,6 mm. Hermético hasta 3 bares (~30 metros).
+                    </p>
+                    <span>$ 112.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/cartier/caPanthereDeCartier.png" alt="">
+                        <img src="storage/images/cartier/caPanthereDeCartier-1.png" alt="">
+                        <img src="storage/images/cartier/caPanthereDeCartier-2.png" alt="">
+                        <img src="storage/images/cartier/caPanthereDeCartier-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/cartier/caPanthereDeCartier.png" alt="">
+                    </div>
+                </div>
+                <h2>Reloj Panthere De Cartier</h2>
+                <div class="informacion">
+                    <p>
+                        Reloj Panthère de Cartier, tamaño mediano, movimiento de cuarzo. Caja y corona de oro amarillo 750/1000 engastadas con 45 diamantes talla brillante con un total de 0,31 quilates. Dimensiones: 27 mm x 36 mm. Grosor: 6 mm. Esfera plateada. Agujas de acero azulado en forma de espada. Brazalete de oro amarillo 750/1000. Hermético hasta 3 bares (~30 metros).
+                    </p>
+                    <span>$ 34.800</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/cartier/caSantosDumont.png" alt="">
+                        <img src="storage/images/cartier/caSantosDumont-1.png" alt="">
+                        <img src="storage/images/cartier/caSantosDumont-2.png" alt="">
+                        <img src="storage/images/cartier/caSantosDumont-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/cartier/caSantosDumont.png" alt="">
+                    </div>
+                </div>
+                <h2>Reloj Santos-Dumont</h2>
+                <div class="informacion">
+                    <p>
+                        Reloj Santos-Dumont, tamaño grande, movimiento de cuarzo de alta autonomía (~ 6 años). Caja de oro rosa 750/1000. Bisel engastado con 52 diamantes talla brillante y corona perlada engastada con un diamante talla brillante con un total de 0,66 quilates. Esfera plateada y satinada efecto rayos de sol. Números romanos. Agujas de acero azulado en forma de espada. Cristal de zafiro. Correa de piel de aligátor color burdeos brillante. Hebilla de oro rosa 750/1000. Dimensiones de la caja: 43,5 x 31,4 mm. Grosor: 7,3 mm. Hermético hasta 3 bares (~ 30 metros).
+                    </p>
+                    <span>$ 24.400</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/cartier/caLaPanthereDeCartier.png" alt="">
+                        <img src="storage/images/cartier/caLaPanthereDeCartier-1.png" alt="">
+                        <img src="storage/images/cartier/caLaPanthereDeCartier-2.png" alt="">
+                        <img src="storage/images/cartier/caLaPanthereDeCartier-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/cartier/caLaPanthereDeCartier.png" alt="">
+                    </div>
+                </div>
+                <h2>Reloj La Panthere De Cartier</h2>
+                <div class="informacion">
+                    <p>
+                        Reloj La Panthère, 23,6 mm, movimiento de cuarzo. Caja de oro amarillo 750/1000 engastada con 134 diamantes talla brillante con un total de 0,98 quilates. Cabeza de pantera de oro amarillo 750/1000 engastada con 298 diamantes talla brillante con un total de 1,43 quilates, ojos de esmeralda talla pera, manchas y hocico de laca negra. Esfera dorada. Agujas de acero rodiado en forma de espada. Cristal de zafiro. Brazalete de dos vueltas de oro amarillo. Grosor: 7,78 mm. Hermético hasta 3 bares (~30 metros).
+                    </p>
+                    <span>$ 108.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="vacheronConstantin" class="seccionMarca hidden">
+            <h1>VACHERON CONSTANTIN</h1>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/vacheronConstantin/vcHeureRomantique.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcHeureRomantique-1.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcHeureRomantique-2.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcHeureRomantique-3.avif" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/vacheronConstantin/vcHeureRomantique.avif" alt="">
+                    </div>
+                </div>
+                <h2>HEURE ROMANTIQUE</h2>
+                <div class="informacion">
+                    <p>
+                        Inspirado en una pieza de 1916 creada durante el período de la Belle Époque y el Art Nouveau, este reloj de oro blanco de 18 quilates rinde homenaje a esa época romántica, con numerosas flores, naturaleza y animales. Está engastado con 123 diamantes talla redonda y presenta una esfera de nácar negra con números romanos pintados. El modelo Heure Romantique se entrega con un brazalete de satén, que incluye un cierre desplegable engastado con diamantes y un brazalete de piel.100
+                    </p>
+                    <span>$ 68.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/vacheronConstantin/vcMalteManual.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcMalteManual-1.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcMalteManual-2.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcMalteManual-3.avif" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/vacheronConstantin/vcMalteManual.avif" alt="">
+                    </div>
+                </div>
+                <h2>MALTE MANUAL</h2>
+                <div class="informacion">
+                    <p>
+                        Este reloj de oro rosa de 18 quilates se caracteriza por su forma de tonel, emblemática de Vacheron Constantin desde 1912. Además de dar la hora, cuenta con una reserva de marcha de casi 3 días. El fondo calado revela los excepcionales acabados del movimiento mecánico de cuerda manual, grabado con el Punzón de Ginebra.
+                    </p>
+                    <span>$ 30.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/vacheronConstantin/vcOverseas2024.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcOverseas2024-1.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcOverseas2024-2.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcOverseas2024-3.avif" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/vacheronConstantin/vcOverseas2024.avif" alt="">
+                    </div>
+                </div>
+                <h2>OVERSEAS CUARZO</h2>
+                <div class="informacion">
+                    <p>
+                        Este reloj de oro rosa de 18 quilates 5N combina feminidad, delicadeza y estilo deportivo. Su bisel de seis cantos, que evoca a la cruz de Malta, está adornado con 78 diamantes talla brillante. Su pequeña caja de 33 milímetros alberga un movimiento de cuarzo que indica las horas, los minutos, los segundos y la ventanilla para la fecha a las 3 horas. Gracias a su hebilla y a sus tres brazaletes (oro rosa, piel y caucho) equipados con un sistema intercambiable, el reloj puede personalizarse de acuerdo con los deseos del propietario.
+                    </p>
+                    <span>$ 55.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imagenes">
+                    <div class="listaImagenes">
+                        <img src="storage/images/vacheronConstantin/vcTourbillonEsqueleto.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcTourbillonEsqueleto-1.png" alt="">
+                        <img src="storage/images/vacheronConstantin/vcTourbillonEsqueleto-2.avif" alt="">
+                        <img src="storage/images/vacheronConstantin/vcTourbillonEsqueleto-3.png" alt="">
+                    </div>
+                    <div class="imagenContainer">
+                        <img class="imagenPrincipal" src="storage/images/vacheronConstantin/vcTourbillonEsqueleto.avif" alt="">
+                    </div>
+                </div>
+                <h2>OVERSEAS TOURBILLON ESQUELETO</h2>
+                <div class="informacion">
+                    <p>
+                        Este reloj de oro rosa 750/1000 5N, un tributo al espíritu viajero, alberga un movimiento esqueleto ultrafino de tan solo 5,65 milímetros de grosor y una jaula del tourbillon inspirada en la cruz de Malta. La masa periférica de oro 916/1000 revela todo el movimiento a través del fondo calado. El excepcional calibre con acabado NAC tiene un tono gris antracita y una reserva de marcha de más de 3 días. Gracias a su cierre y al sencillo sistema de intercambio de sus tres brazaletes —oro rosa 750/1000 5N, piel y caucho—, el reloj puede personalizarse de acuerdo con los deseos del propietario.
+                    </p>
+                    <span>$ 100.000</span>
+                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                </div>
+            </div>
+        </section>
+  
+    </main>
+
+    <footer></footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
