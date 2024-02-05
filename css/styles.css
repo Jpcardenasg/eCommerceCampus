@@ -132,13 +132,17 @@ p {
     padding: 5rem 0 1.2rem;
 }
 
-.productos {
+.productos, .totalPagar {
     display: flex;
     justify-content: space-around;
     width: 90vw;
     padding: 0.8rem;
     background: linear-gradient(to bottom, var(--neutral-100), var(--neutral-200));
     border-radius: 10px;
+}
+
+.totalPagar {
+    justify-content: space-between;
 }
 
 .productos img {
