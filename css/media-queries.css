@@ -39,12 +39,20 @@
 @media screen and (min-width: 992px) {
 
     header {
-        padding: 1.5rem;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 1rem;
     }
 
     ul {
         flex-direction: row;
         height: auto;
+    }
+
+    #carroSelector {
+        padding: 0.5rem;
+        border-radius: 6px;
     }
 
     #marcaSelector {
@@ -53,10 +61,17 @@
 
     #listaMarcas {
         display: block;
+        width: 90%;
     }
 
     #marcasContainer {
-        padding-top: 7.4rem;
+        padding-top: 8rem;
+    }
+
+    .botones {
+        width: fit-content;
+        align-self: flex-end;
+        background-color: unset;
     }
 
     .card {
