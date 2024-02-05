@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,10 @@
 <body>
 
     <header>
-        <button id="marcaSelector"><i class='bx bxs-watch'></i></button>
+        <div class="botones">
+            <button id="marcaSelector"><i class='bx bxs-watch'></i></button>
+            <button id="carroSelector" onclick="mostrarProductosAgregados()"><i class='bx bxs-cart'></i></button>
+        </div>
         <div id="listaMarcas" class="">
             <ul onclick="seleccionarMarca(event)">
                 <li data-marca="rolex">Rolex</li>
@@ -30,6 +33,65 @@
     </header>
 
     <main id="marcasContainer">
+
+        <div id="agregarProducto"></div>
+        <div id="productosAgregados" style="display: none;">
+            <h2>Detalles</h2>
+            <button id="cerrarProductosAgregados" onclick="cerrarProductosAgregados()"><i class="bx bx-x"></i></button>
+            <div class="productos">
+                <img src="storage/images/rolex/rolex1908.avif" alt="Reloj Rolex">
+                <div class="productos__info">
+                    <h3>Rolex 1908</h3>
+                    <div class="productos__footer">
+                        <input type="text" placeholder="cantidad">
+                        <div class="precios">
+                            <span>$ 26.200</span>
+                            <span>$ 9.999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="productos">
+                <img src="storage/images/rolex/rolexCosmographDaytona.avif" alt="Reloj Rolex">
+                <div class="productos__info">
+                    <h3>Rolex Cosmograph Daytona</h3>
+                    <div class="productos__footer">
+                        <input type="text" placeholder="cantidad">
+                        <div class="precios">
+                            <span>$ 92.600</span>
+                            <span>$ 9.999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="productos">
+                <img src="storage/images/cartier/caSantosDumont.png" alt="Reloj Cartier">
+                <div class="productos__info">
+                    <h3>Santos Dumont</h3>
+                    <div class="productos__footer">
+                        <input type="text" placeholder="cantidad">
+                        <div class="precios">
+                            <span>$ 40.000</span>
+                            <span>$ 9.999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="productos">
+                <img src="storage/images/jaegerLeCoultre/jcMasterUltraThin.png" alt="Reloj Jaeger">
+                <div class="productos__info">
+                    <h3>Master Ultra Thin</h3>
+                    <div class="productos__footer">
+                        <input type="text" placeholder="cantidad">
+                        <div class="precios">
+                            <span>$ 90.700</span>
+                            <span>$ 9.999</span>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
         <section id="rolex" class="seccionMarca">
             <h1>ROLEX</h1>
             <div class="card">
@@ -46,11 +108,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Rolex 1908</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Desde la creación de la marca en 1908, Rolex ha mantenido la profunda convicción de su fundador, Hans Wilsdorf, de que el futuro del reloj de pulsera es indisociable del rendimiento superlativo. Heredero del patrimonio estilístico de Rolex y dotado de innovaciones relojeras exclusivas, el elegante Perpetual 1908 marca un nuevo hito en la búsqueda de la excelencia de la Manufactura. Este buen ejemplo de la proeza relojera de Rolex, con la certificación de Cronómetro Superlativo, lleva el clasicismo al futuro.
                     </p>
-                    <span>$ 26.200</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 26.200</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -67,11 +139,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Rolex Cosmograph Daytona</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Presentado en 1963, el Cosmograph Daytona ha trascendido su estatus desde hace tiempo en el mundo de la relojería para convertirse en un icono. Su nombre, indisociable de la famosa pista, así como su rostro gráfico, lo han convertido en una leyenda. Pero es en el corazón de este excepcional cronógrafo donde reside la verdadera mecánica de la leyenda: un movimiento diseñado y producido completamente por la Manufactura Rolex que ofrece un rendimiento superlativo en cualquier circunstancia. El Cosmograph Daytona, mejorado constantemente y refinado con el tiempo, ha demostrado ser tan fiable como preciso.
                     </p>
-                    <span>$ 92.600</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 92.600</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -88,11 +170,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Rolex GMT Master</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Como sucesor del modelo presentado en 1955 y adoptado por los pilotos de aerolíneas, el GMT‑Master II se ha convertido en el reloj cosmopolita por excelencia. Con una aguja adicional 24 horas y un bisel bicolor giratorio graduado, muestra un segundo huso horario. También permite a cada usuario fortalecer su conexión con su «otro lugar» personal, ya sea a partir de recuerdos, destinos soñados o viajes futuros.
                     </p>
-                    <span>$ 13.350</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 13.350</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -109,11 +201,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Rolex Sky Dweller</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         El Oyster Perpetual Sky-Dweller fue diseñado para aquellos que viajan continuamente por todo el mundo. Con nuestra función de calendario anual Saros y sistema de Comando de Anillo, indica simultáneamente dos zonas horarias, así como la fecha y el mes, y permite ajustarlos con un simple gesto.
                     </p>
-                    <span>$ 60.500</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 60.500</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -134,11 +236,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Reloj Baignoire</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Reloj Baignoire de Cartier, tamaño pequeño, movimiento de cuarzo. Caja, corona y brazalete de oro blanco rodiado 750/1000 engastados con 1026 diamantes talla brillante con un total de 6,39 quilates. Corona perlada, esfera plateada, agujas de acero azulado en forma de espada, cristal de zafiro. Largo: 31,4 mm, ancho: 23,1 mm, grosor: 7,6 mm. Hermético hasta 3 bares (~30 metros).
                     </p>
-                    <span>$ 112.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 112.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -155,11 +267,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Reloj Panthere De Cartier</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Reloj Panthère de Cartier, tamaño mediano, movimiento de cuarzo. Caja y corona de oro amarillo 750/1000 engastadas con 45 diamantes talla brillante con un total de 0,31 quilates. Dimensiones: 27 mm x 36 mm. Grosor: 6 mm. Esfera plateada. Agujas de acero azulado en forma de espada. Brazalete de oro amarillo 750/1000. Hermético hasta 3 bares (~30 metros).
                     </p>
-                    <span>$ 34.800</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 34.800</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -176,11 +298,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Reloj Santos-Dumont</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Reloj Santos-Dumont, tamaño grande, movimiento de cuarzo de alta autonomía (~ 6 años). Caja de oro rosa 750/1000. Bisel engastado con 52 diamantes talla brillante y corona perlada engastada con un diamante talla brillante con un total de 0,66 quilates. Esfera plateada y satinada efecto rayos de sol. Números romanos. Agujas de acero azulado en forma de espada. Cristal de zafiro. Correa de piel de aligátor color burdeos brillante. Hebilla de oro rosa 750/1000. Dimensiones de la caja: 43,5 x 31,4 mm. Grosor: 7,3 mm. Hermético hasta 3 bares (~ 30 metros).
                     </p>
-                    <span>$ 24.400</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 24.400</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -197,11 +329,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Reloj La Panthere De Cartier</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Reloj La Panthère, 23,6 mm, movimiento de cuarzo. Caja de oro amarillo 750/1000 engastada con 134 diamantes talla brillante con un total de 0,98 quilates. Cabeza de pantera de oro amarillo 750/1000 engastada con 298 diamantes talla brillante con un total de 1,43 quilates, ojos de esmeralda talla pera, manchas y hocico de laca negra. Esfera dorada. Agujas de acero rodiado en forma de espada. Cristal de zafiro. Brazalete de dos vueltas de oro amarillo. Grosor: 7,78 mm. Hermético hasta 3 bares (~30 metros).
                     </p>
-                    <span>$ 108.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 108.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -222,11 +364,21 @@
                 </div>
                 <div class="informacion">
                     <h2>HEURE ROMANTIQUE</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Inspirado en una pieza de 1916 creada durante el período de la Belle Époque y el Art Nouveau, este reloj de oro blanco de 18 quilates rinde homenaje a esa época romántica, con numerosas flores, naturaleza y animales. Está engastado con 123 diamantes talla redonda y presenta una esfera de nácar negra con números romanos pintados. El modelo Heure Romantique se entrega con un brazalete de satén, que incluye un cierre desplegable engastado con diamantes y un brazalete de piel.100
                     </p>
-                    <span>$ 68.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 68.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -243,11 +395,21 @@
                 </div>
                 <div class="informacion">
                     <h2>MALTE MANUAL</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Este reloj de oro rosa de 18 quilates se caracteriza por su forma de tonel, emblemática de Vacheron Constantin desde 1912. Además de dar la hora, cuenta con una reserva de marcha de casi 3 días. El fondo calado revela los excepcionales acabados del movimiento mecánico de cuerda manual, grabado con el Punzón de Ginebra.
                     </p>
-                    <span>$ 30.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 30.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -264,11 +426,21 @@
                 </div>
                 <div class="informacion">
                     <h2>OVERSEAS CUARZO</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Este reloj de oro rosa de 18 quilates 5N combina feminidad, delicadeza y estilo deportivo. Su bisel de seis cantos, que evoca a la cruz de Malta, está adornado con 78 diamantes talla brillante. Su pequeña caja de 33 milímetros alberga un movimiento de cuarzo que indica las horas, los minutos, los segundos y la ventanilla para la fecha a las 3 horas. Gracias a su hebilla y a sus tres brazaletes (oro rosa, piel y caucho) equipados con un sistema intercambiable, el reloj puede personalizarse de acuerdo con los deseos del propietario.
                     </p>
-                    <span>$ 55.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 55.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -285,11 +457,21 @@
                 </div>
                 <div class="informacion">
                     <h2>OVERSEAS TOURBILLON ESQUELETO</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Este reloj de oro rosa 750/1000 5N, un tributo al espíritu viajero, alberga un movimiento esqueleto ultrafino de tan solo 5,65 milímetros de grosor y una jaula del tourbillon inspirada en la cruz de Malta. La masa periférica de oro 916/1000 revela todo el movimiento a través del fondo calado. El excepcional calibre con acabado NAC tiene un tono gris antracita y una reserva de marcha de más de 3 días. Gracias a su cierre y al sencillo sistema de intercambio de sus tres brazaletes —oro rosa 750/1000 5N, piel y caucho—, el reloj puede personalizarse de acuerdo con los deseos del propietario.
                     </p>
-                    <span>$ 100.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 100.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -310,11 +492,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Atmos Hybris Mechanica</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         El Atmos Hybris Mechanica Calibre 590 es de una belleza impresionante, un homenaje a la elegancia artística de un reloj verdaderamente extraordinario. Fruto de las estrellas, cuenta con algunos de los elementos más exclusivos de la Tierra y mucho más.
                     </p>
-                    <span>$ 208.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 208.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -331,11 +523,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Master Ultra Thin</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Esto es un final, pero, también, un comienzo. Este año ha sido increíble. Esto se debe a que hemos dado los pasos adecuados en el momento adecuado. El tiempo tiene sus propias reglas; el esfuerzo tiene sus propias recompensas. Los dedos de Jackson Yee tocan notas, su pincel se desliza sobre el papel. A través de la práctica, crece. Los pequeños esfuerzos le ayudan a construir su camino. Un camino a su hogar. A donde siempre ha pertenecido. Lo mejor está por llegar, justo a tiempo.
                     </p>
-                    <span>$ 50.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 50.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -352,11 +554,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Reverso Tribute Duoface Tourbillon</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         EEl Reverso Tribute Duoface Tourbillon rinde homenaje al primer reloj de pulsera con tourbillon rectangular de nuestra Maison. En su nueva caja ultra-thin de oro rosa (9,15 mm), la ausencia de un puente superior permite ver claramente el tourbillon volante, visible también en el reverso.Montado a mano en el Taller de grandes complicaciones, el tourbillon es increíblemente ligero (0,455 g) pese a sus 62 componentes. Este excepcional reloj, que incorpora el calibre 847 de la Manufactura, presenta también un segundo huso horario en el reverso, en un calibre de tan solo 3,9 mm de grosor, prueba de la destreza y el ingenio de nuestros relojeros.
                     </p>
-                    <span>$ 95.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 95.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -373,11 +585,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Reverso Tribute Enamel 'DRAGON'</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Jaeger-LeCoultre suma un nuevo capítulo a la historia de artesanía y talento artístico del Reverso: el Reverso Tribute Enamel 'Dragon'. Creado para celebrar el inicio del Año Nuevo Lunar 2024, este nuevo reloj rinde un homenaje al signo del Dragón, y a los talentos de los maestros esmaltadores y grabadores del taller de oficios extraordinarios Métiers Rares™ de la Manufactura Jaeger-LeCoultre.
                     </p>
-                    <span>$ 200.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 200.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -398,10 +620,20 @@
                 </div>
                 <div class="informacion">
                     <h2>5271/12P</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Versión joyería de un gran clásico de Patek Philippe, la referencia 5271/12P-010 se ilumina con 80 rubíes baguette (5,25 ct) engastados en el bisel, las asas de la pulsera y el cierre desplegable. El color intenso de las gemas se refleja en la esfera lacada en rojo degradé negro y en la pulsera de piel de aligátor negro brillante con pespuntes rojos en contraste.                    </p>
-                    <span>$ 68.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 68.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -418,11 +650,21 @@
                 </div>
                 <div class="informacion">
                     <h2>5304/301 R</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Milagro de transparencia, el Gran Complicación automático con repetición de minutos y calendario perpetuo retrógrado referencia 5304 se presenta en una nueva versión de oro rosa con bisel, asas y cierre desplegable realzados con 80 diamantes baguette (~6,22 qts). Esta nota de brillo pone de relieve el ingenioso sistema de visualización del calendario con discos de zafiro. El motivo de “hojas” grabado en las inserciones de oro blanco que adornan los laterales de la caja se repite en el mini rotor descentrado de oro rosa visible a través del fondo transparente.
                     </p>
-                    <span>$ 80.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 80.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -439,13 +681,23 @@
                 </div>
                 <div class="informacion">
                     <h2>5327R</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Un nuevo calendario perpetuo automático hace su entrada en la colección Patek Philippe, con una caja Calatrava con asas finamente torneadas y cifras Breguet aplicadas.
                         <br>
                         Las versiones en oro amarillo o rosa se ornamentan con una esfera lacada color marfil con contadores en relieve, y la versión en oro blanco con una esfera azul sol. Estos relojes se entregan con un fondo de cristal de zafiro y un fondo macizo intercambiables.
                     </p>
-                    <span>$ 55.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 55.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -462,11 +714,21 @@
                 </div>
                 <div class="informacion">
                     <h2>6104R</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Enalteciendo la gran tradición de Patek Philippe en materia de relojes astronómicos, el celestial dedica su esfera a una carta giratoria de cuerpos celestes. En todo momento, su propietario puede admirar la configuración exacta del cielo nocturno en el hemisferio norte, incluyendo el movimiento aparente de las estrellas, la posición de la luna y sus fases a través del ciclo lunar. Dos agujas caladas indican la hora y los minutos de la hora oficial. Una elipse, dispuesta bajo el cristal del reloj, delimita la apertura del cielo visible sobre la ciudad de ginebra y en todas las ciudades situadas en la misma latitud.
                     </p>
-                    <span>$ 100.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 100.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -487,11 +749,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Aquatimer Cronógrafo "Expedition Charles Darwin"</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Caja de Bronce , Automático, cuerda automática, Diámetro 44.0 mm, Negro esfera con luminiscencia, Correa de caucho negra con sistema de cambio rápido patentado de IWC, Ancho de la correa 22.0 mm.                  
                     </p>
-                    <span>$ 11.700</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 11.700</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -508,11 +780,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Gran Reloj De Aviador</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Caja de Acero fino , Automático, cuerda automática, Diámetro 46.2 mm, Negro esfera con luminiscencia, Correa de piel de ternero negra, Ancho de la correa 22.0 mm.                  
                     </p>
-                    <span>$ 14.300</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 14.300</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -529,11 +811,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Ingenieur Automático 40</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Caja de Titanio , Automático, cuerda automática, Diámetro 40.0 mm, Brazalete de titanio, Ancho de la correa 14.0 mm.                  
                     </p>
-                    <span>$ 16.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 16.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -550,11 +842,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Portugieser Tourbillon Mystére Rétrograde</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Caja de Oro rojo 18 quil , Automático, cuerda automática, Diámetro 44.2 mm, Correa de piel de aligátor marrón oscuro de Santoni, Ancho de la correa 22.0 mm.                 
                     </p>
-                    <span>$ 103.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 103.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -575,11 +877,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Constellation</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Este modelo de 41 mm, en acero noble y oro amarillo de 18 qt, lleva un aro de bisel de cerámica pulida marrón con números romanos rellenos de OMEGA Ceragold™. Tiene una esfera gris rodiada con acabado sedoso en relieve y una ventana de fecha situada a las 6 h. Las agujas, el logotipo OMEGA, la estrella Constellation y los índices son también de oro amarillo de 18 qt.
                     </p>
-                    <span>$ 10.700</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 10.700</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -596,11 +908,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Constellation Globemaster</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         El Globemaster, nombre legendario de la familia OMEGA, se convirtió en el primer Master Chronometer del mundo en 2015, lo que reforzó aún más su reputación dentro del sector de relojería. En este modelo de 41 mm, la caja de acero noble presenta un bisel de oro Sedna™ de 18 qt pulido. El fondo de la caja incluye en su centro el medallón del Observatorio embutido en un cristal de zafiro resistente al rayado.
                     </p>
-                    <span>$ 13.700</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 13.700</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -617,11 +939,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Seamaster Driver 300M</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Lanzado en 2022 para celebrar el 60 aniversario de las películas de James Bond, este Seamaster Diver 300M de 42 mm de oro Canopus™ presenta una esfera de silicio gris natural. Una referencia a la arena del escondite caribeño de 007. Alrededor de la esfera, destaca el bisel giratorio unidireccional engastado con diamantes tratados verdes y amarillos, con dos diamantes situados a las 12.
                     </p>
-                    <span>$ 167.900</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 167.900</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -638,6 +970,13 @@
                 </div>
                 <div class="informacion">
                     <h2>Constellation</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Torneado en un solo bloque de cerámica, Speedmaster White Side of the Moon da un toque femenino a la intemporal colección "Moonwatch".
 
@@ -645,8 +984,11 @@
                         
                         La esfera de estilo "Moonwatch" y las dos subesferas situadas a las 6 y las 9 son también de cerámica blanca, con resplandecientes índices en oro blanco de 18 qt.
                     </p>
-                    <span>$ 13.900</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 13.900</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -667,13 +1009,23 @@
                 </div>
                 <div class="informacion">
                     <h2>1815 Rattrapante Perpetual Calendar</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Lanzado en 2013, el 1815 RATTRAPANTE PERPETUAL CALENDAR marcó un hito en la historia más reciente de A. Lange & Söhne: nada menos que siete calibres de cronógrafo habían sido previamente elaborados por la manufactura sajona. Equipado con un movimiento especialmente desarrollado, unía tres de las complicaciones más elaboradas mientras mantenía el diseño clásico y elegante de la familia de relojes 1815.
 
                         La excepcional pieza destaca en la medición de distancias cortas y largas, y gracias a sus complicaciones homónimas, el 1815 RATTRAPANTE PERPETUAL CALENDAR establece estándares tanto en la medición de tiempos cortos como en la visualización de períodos de calendario.
                     </p>
-                    <span>$ 125.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 125.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -690,13 +1042,23 @@
                 </div>
                 <div class="informacion">
                     <h2>Lange 1 Perpetual Calendar</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         El LANGE 1 PERPETUAL CALENDAR se centra exclusivamente en su complicación homónima: gracias al anillo mensual periférico especialmente desarrollado, fue posible incorporar el calendario mientras se preserva el destacado diseño del LANGE 1.
 
                         La pantalla del mes se complementa con la fecha sobredimensionada Lange, una pantalla retrograda del día de la semana y una indicación de año bisiesto. La pantalla de fase lunar con un indicador integrado de día/noche y las indicaciones instantáneas del calendario son características adicionales destacadas. Una vez configurado correctamente, el mecanismo está programado para mostrar con precisión el cambio de mes hasta el año 2100.
                     </p>
-                    <span>$ 175.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 175.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -713,13 +1075,23 @@
                 </div>
                 <div class="informacion">
                     <h2>Lange 1 Time Zone</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Tokio, Dubái, Berlín: Con el LANGE 1 TIME ZONE, literalmente tienes el mundo en tu muñeca. Muestra la hora en casa y en otra zona horaria de un vistazo. Las pantallas de día/noche en forma de anillo y la indicación de horario de verano para la segunda zona horaria amplían el ya elevado grado de funcionalidad.
 
                         Este año, A. Lange & Söhne lanza una nueva variante de este reloj de zona horaria ingeniosamente construido en platino 950 con un dial de color rodio. La combinación de colores monocromáticos agrega una elegancia atemporal a la sofisticación técnica.
                     </p>
-                    <span>$ 51.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 51.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -736,13 +1108,23 @@
                 </div>
                 <div class="informacion">
                     <h2>Zeitwerk Minute Repeater</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         El ZEITWERK MINUTE REPEATER es el primer reloj de pulsera mecánico que combina una pantalla de números saltantes con un repetidor de minutos decimal. Su mecanismo técnicamente muy sofisticado suena la hora a pedido.
 
                         A. Lange & Söhne presenta ahora esta excepcional pieza técnica en una edición limitada de 30 relojes con un dial gris y una caja elaborada en el exclusivo oro de Lange (HONEYGOLD®), otorgando al reloj un sonido singular. A pedido, se emite un tono grave por cada hora transcurrida, un tono doble por cada período de diez minutos transcurridos y un tono agudo por cada minuto transcurrido.
                     </p>
-                    <span>$ 125.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 125.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
         </section>
@@ -763,11 +1145,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Code 11.59</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         En una nueva caja de 38 mm, este modelo combina la esfera de color ciruela y la pulsera de piel de aligátor a juego con el oro rosa para ofrecer una estética rica y cálida.
                     </p>
-                    <span>$ 32.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 32.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -784,11 +1176,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Royal Oak Automático</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         En una nueva colaboración con el diseñador de moda internacional Matthew Williams, este Royal Oak Automático íntegramente de oro amarillo rinde un tributo a la artesanía y la emoción.
                     </p>
-                    <span>$ 70.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 70.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -805,11 +1207,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Royal Oak Calendario Perpetuo Esqueletado "CACTUS JACK"</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         El Royal Oak Calendario Perpetuo Esqueleto «Cactus Jack» Edición Limitada de 200 ejemplares se ha elaborado en cerámica marrón, toda una primicia en Audemars Piguet, con componentes resaltados con revestimiento luminiscente verde o azul.
                     </p>
-                    <span>$ 550.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 550.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -826,11 +1238,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Royal Oak Concept Flying Tourbillon “TAMARA RALPH” LIMITED EDITION</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Diseñado en colaboración con Tamara Ralph, el Royal Oak Concept Tourbillon Volante de edición limitada presenta una caja de oro rosa de 18 quilates con un reluciente acabado Frosted Gold y una esfera multicapa en tonos degradados de marrón, bronce y oro.
                     </p>
-                    <span>$ Precio a petición</span> 
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 150.000</span>
+                        <span>$ 9.999</span>
+                    </div> 
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
            
@@ -852,11 +1274,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Classic Fusion Orlinski</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Para Hublot, los materiales son una parte integral del diseño de sus relojes. Deben complementar el diseño, proteger el mecanismo y resistir la prueba del tiempo. Por lo tanto, la Manufactura ha optado por utilizar cerámica de alta tecnología para ciertos biseles y cajas; es un material ultra resistente y prácticamente a prueba de arañazos (a excepción del diamante) con una base de circonio sinterizado a temperaturas muy elevadas.
                     </p>
-                    <span>$ 95.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 95.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -873,11 +1305,21 @@
                 </div>
                 <div class="informacion">
                     <h2>MP-10 Tourbillon Weight Energy System Titanium</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         La nueva MP de la Manufactura revisita los fundamentos de la relojería: sin esfera, agujas ni rotor oscilante, en su lugar cuenta con una pantalla de rodillo, una reserva de marcha circular y un tourbillon inclinado con carga automática mediante dos pesos lineales.
                     </p>
-                    <span>$ 264.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 264.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -894,11 +1336,21 @@
                 </div>
                 <div class="informacion">
                     <h2>MP-15 Takashi Murakami Tourbillon Sapphire</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Con solo 50 unidades disponibles, el MP-15 es el primer reloj Hublot de edición limitada con un tourbillon central volante. Este modelo extravagante, lúdico pero de alta tecnología, ofrece una magnífica interpretación de los efectos visuales del zafiro.
                     </p>
-                    <span>$ 316.000</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 316.000</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>
             <div class="card">
@@ -915,11 +1367,21 @@
                 </div>
                 <div class="informacion">
                     <h2>Square Bang Unico King Gold Rainbow</h2>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>
                         Al desarrollar su propio movimiento cronógrafo automático, Hublot deseaba que fuera, como todas sus creaciones, el primero, diferente y único. Como el alma del reloj, este movimiento con un "corazón abierto" revela su diseño completamente reinventado, con un sistema de acoplamiento doble y rueda de columnas desde el lado del dial, además de una reserva de marcha de 72 horas. Su construcción de 354 componentes se ha simplificado tanto como sea posible para mejorar la confiabilidad y robustez.
                     </p>
-                    <span>$ 98.900</span>
-                    <button id="obtener" onclick="obtenerProdcuto()">Obtener</button>
+                    <div class="precios">
+                        <span>$ 98.900</span>
+                        <span>$ 9.999</span>
+                    </div>
+                    <div class="footCard"><button id="obtener" onclick="obtenerProducto(event)">Obtener</button></div>
                 </div>
             </div>           
         </section>
