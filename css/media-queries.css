@@ -22,6 +22,11 @@
 
 @media screen and (min-width: 768px) {
 
+    #productosAgregados {
+        overflow-y: scroll;
+        max-height: 90vh;
+    }
+
     #listaMarcas li {
         font-size: 1rem;
     }
@@ -54,6 +59,10 @@
         height: auto;
     }
 
+    #agregarProducto .card{
+        width: 70vw;
+    }
+
     #productosAgregados  {
         width: 50vw;
     }
@@ -84,6 +93,11 @@
         width: fit-content;
         align-self: flex-end;
         background-color: unset;
+    }
+
+    .imagenes button {
+        position: absolute;
+        right: 10px;
     }
 
     .card {
