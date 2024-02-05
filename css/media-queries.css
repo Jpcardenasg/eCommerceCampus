@@ -1,0 +1,100 @@
+@import url('variables.css');
+
+
+@media screen and (min-width: 500px) {
+
+    .listaImagenes img {
+        width: 8.25rem;
+        height: 7rem;
+    }
+
+    .imagenContainer {
+        height: calc(7rem * 4);
+        width: 75%;
+
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #listaMarcas li {
+        font-size: 1rem;
+    }
+
+    .listaImagenes img {
+        width: 8.25rem;
+        height: 7rem;
+    }
+
+    .imagenContainer {
+        height: calc(7rem * 4);
+        width: 75%;
+
+    }
+
+}
+
+
+@media screen and (min-width: 992px) {
+
+    header {
+        padding: 1.5rem;
+    }
+
+    ul {
+        flex-direction: row;
+        height: auto;
+    }
+
+    #marcaSelector {
+        display: none;
+    }
+
+    #listaMarcas {
+        display: block;
+    }
+
+    #marcasContainer {
+        padding-top: 7.4rem;
+    }
+
+    .card {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .listaImagenes img {
+        width: 9.25rem;
+        height: 7rem;
+    }
+
+    .imagenContainer {
+        height: calc(7rem * 4);
+        width: 22rem;
+    }
+    
+    .informacion {
+        width: 50%;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .listaImagenes img {
+        width: 13.25rem;
+        height: 9.5rem;
+    }
+
+    .imagenContainer {
+        height: calc(9.5rem * 4);
+        width: 40rem;
+    }
+
+    .informacion {
+        width: 38%;
+    }
+    
+}
